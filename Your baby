@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>2B Valentine</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #ffe6ea;
+  }
+  .box {
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  #no {
+    position: absolute;
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Will you 2B my Valentine? ❤️</h2>
+  <button onclick="yesClick()">YES</button>
+  <button id="no" onmouseover="moveNo()">NO</button>
+</div>
+
+<script>
+  function yesClick() {
+    alert("Yay! 💖 You made my day!");
+  }
+
+  function moveNo() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    document.getElementById("no").style.left = x + "px";
+    document.getElementById("no").style.top = y + "px";
+  }
+</script>
+
+</body>
+</html>
